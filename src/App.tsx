@@ -1,6 +1,8 @@
 import "./App.css";
 import { useMemo } from "react";
 
+import profileImage from './img/3.png';
+
 import Home from "./Home";
 
 import * as anchor from "@project-serum/anchor";
@@ -84,6 +86,7 @@ const App = () => {
 
   return (
       <ThemeProvider theme={theme}>
+        <img src={profileImage} alt="profile-image"/>
         <ConnectionProvider endpoint={endpoint}>
           <WalletProvider wallets={wallets} autoConnect={true}>
             <WalletDialogProvider>
